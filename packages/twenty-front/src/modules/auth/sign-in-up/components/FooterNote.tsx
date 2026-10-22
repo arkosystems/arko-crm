@@ -53,61 +53,52 @@ const StyledSeparator = styled.span`
   color: ${({ theme }) => theme.font.color.tertiary};
 `;
 
+// ARKO: o rodape mostra so o link do codigo-fonte (AGPL, secao 13), lido da
+// variavel ARKO_CODIGO_FONTE_URL do servidor; sem a variavel, a linha nao aparece
+const getSourceCodeUrl = () => {
+  const url = window._env_?.ARKO_CODIGO_FONTE_URL;
+
+  return typeof url === 'string' && url.trim() !== '' ? url.trim() : null;
+};
+
 export const FooterNote = () => {
   const isOnAWorkspace = useIsCurrentLocationOnAWorkspace();
 
   const { shouldOfferBypass, shouldUseBypass, enableBypass } =
     useWorkspaceBypass();
 
+  const sourceCodeUrl = getSourceCodeUrl();
+
+  const sourceCodeLink =
+    sourceCodeUrl !== null ? (
+      <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer">
+        Código-fonte
+      </a>
+    ) : null;
+
   if (!isOnAWorkspace) {
-    return (
-      <StyledCopyContainer>
-        <Trans>By using Twenty, you agree to the</Trans>{' '}
-        <a
-          href="https://twenty.com/legal/terms"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Trans>Terms of Service</Trans>
-        </a>{' '}
-        <Trans>and</Trans>{' '}
-        <a
-          href="https://twenty.com/legal/privacy"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Trans>Privacy Policy</Trans>
-        </a>
-        .
-      </StyledCopyContainer>
-    );
+    return sourceCodeLink !== null ? (
+      <StyledCopyContainer>{sourceCodeLink}</StyledCopyContainer>
+    ) : null;
+  }
+
+  const shouldShowBypass = shouldOfferBypass && !shouldUseBypass;
+
+  if (!shouldShowBypass && sourceCodeLink === null) {
+    return null;
   }
 
   return (
     <StyledLinksContainer>
-      {shouldOfferBypass && !shouldUseBypass && (
-        <>
-          <button type="button" onClick={enableBypass}>
-            <Trans>Bypass SSO</Trans>
-          </button>
-          <StyledSeparator>•</StyledSeparator>
-        </>
+      {shouldShowBypass && (
+        <button type="button" onClick={enableBypass}>
+          <Trans>Bypass SSO</Trans>
+        </button>
       )}
-      <a
-        href="https://twenty.com/legal/privacy"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Trans>Privacy Policy</Trans>
-      </a>
-      <StyledSeparator>•</StyledSeparator>
-      <a
-        href="https://twenty.com/legal/terms"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Trans>Terms of Service</Trans>
-      </a>
+      {shouldShowBypass && sourceCodeLink !== null && (
+        <StyledSeparator>•</StyledSeparator>
+      )}
+      {sourceCodeLink}
     </StyledLinksContainer>
   );
 };

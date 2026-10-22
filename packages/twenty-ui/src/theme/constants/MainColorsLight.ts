@@ -1,4 +1,5 @@
 import * as RadixColors from '@radix-ui/colors';
+import { ARKO_GREEN_LIGHT } from '@ui/theme/constants/ArkoGreen';
 import { GRAY_SCALE_LIGHT } from './GrayScaleLight';
 
 export const MAIN_COLORS_LIGHT = {
@@ -24,7 +25,7 @@ export const MAIN_COLORS_LIGHT = {
   turquoise: RadixColors.tealP3.teal9,
   cyan: RadixColors.cyanP3.cyan9,
   sky: RadixColors.skyP3.sky9,
-  blue: RadixColors.indigoP3.indigo9,
+  blue: ARKO_GREEN_LIGHT.arko9,
 
   // Purples & Pinks
   iris: RadixColors.irisP3.iris9,

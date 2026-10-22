@@ -1,4 +1,5 @@
 import * as RadixColors from '@radix-ui/colors';
+import { ARKO_GREEN_DARK } from '@ui/theme/constants/ArkoGreen';
 import { GRAY_SCALE_DARK } from '@ui/theme/constants/GrayScaleDark';
 
 export const SECONDARY_COLORS_DARK = {
@@ -54,18 +55,18 @@ export const SECONDARY_COLORS_DARK = {
   sky11: RadixColors.skyDarkP3.sky11,
   sky12: RadixColors.skyDarkP3.sky12,
 
-  blue1: RadixColors.indigoDarkP3.indigo1,
-  blue2: RadixColors.indigoDarkP3.indigo2,
-  blue3: RadixColors.indigoDarkP3.indigo3,
-  blue4: RadixColors.indigoDarkP3.indigo4,
-  blue5: RadixColors.indigoDarkP3.indigo5,
-  blue6: RadixColors.indigoDarkP3.indigo6,
-  blue7: RadixColors.indigoDarkP3.indigo7,
-  blue8: RadixColors.indigoDarkP3.indigo8,
-  blue9: RadixColors.indigoDarkP3.indigo9,
-  blue10: RadixColors.indigoDarkP3.indigo10,
-  blue11: RadixColors.indigoDarkP3.indigo11,
-  blue12: RadixColors.indigoDarkP3.indigo12,
+  blue1: ARKO_GREEN_DARK.arko1,
+  blue2: ARKO_GREEN_DARK.arko2,
+  blue3: ARKO_GREEN_DARK.arko3,
+  blue4: ARKO_GREEN_DARK.arko4,
+  blue5: ARKO_GREEN_DARK.arko5,
+  blue6: ARKO_GREEN_DARK.arko6,
+  blue7: ARKO_GREEN_DARK.arko7,
+  blue8: ARKO_GREEN_DARK.arko8,
+  blue9: ARKO_GREEN_DARK.arko9,
+  blue10: ARKO_GREEN_DARK.arko10,
+  blue11: ARKO_GREEN_DARK.arko11,
+  blue12: ARKO_GREEN_DARK.arko12,
 
   purple1: RadixColors.purpleDarkP3.purple1,
   purple2: RadixColors.purpleDarkP3.purple2,

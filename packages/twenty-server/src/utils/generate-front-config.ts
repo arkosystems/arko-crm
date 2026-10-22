@@ -12,6 +12,8 @@ export function generateFrontConfig(): void {
     window: {
       _env_: {
         REACT_APP_SERVER_BASE_URL: process.env.SERVER_URL,
+        // ARKO: link do codigo-fonte no rodape do login (AGPL); ausente, some
+        ARKO_CODIGO_FONTE_URL: process.env.ARKO_CODIGO_FONTE_URL,
       },
     },
   };

@@ -1,3 +1,4 @@
+import * as RadixColors from '@radix-ui/colors';
 import { COLOR_DARK } from '@ui/theme/constants/ColorsDark';
 
 export const TAG_DARK = {
@@ -20,7 +21,8 @@ export const TAG_DARK = {
     cyan: COLOR_DARK.cyan11,
     turquoise: COLOR_DARK.turquoise11,
     sky: COLOR_DARK.sky11,
-    blue: COLOR_DARK.blue11,
+    // ARKO: a cor 'blue' de etiqueta escolhida pelo usuario continua azul
+    blue: RadixColors.indigoDarkP3.indigo11,
     jade: COLOR_DARK.jade11,
     green: COLOR_DARK.green11,
     grass: COLOR_DARK.grass11,
@@ -52,7 +54,8 @@ export const TAG_DARK = {
     cyan: COLOR_DARK.cyan3,
     turquoise: COLOR_DARK.turquoise3,
     sky: COLOR_DARK.sky3,
-    blue: COLOR_DARK.blue3,
+    // ARKO: a cor 'blue' de etiqueta escolhida pelo usuario continua azul
+    blue: RadixColors.indigoDarkP3.indigo3,
     jade: COLOR_DARK.jade3,
     green: COLOR_DARK.green3,
     grass: COLOR_DARK.grass3,

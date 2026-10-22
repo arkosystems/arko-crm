@@ -1,3 +1,4 @@
+import * as RadixColors from '@radix-ui/colors';
 import { COLOR_LIGHT } from '@ui/theme/constants/ColorsLight';
 
 export const TAG_LIGHT = {
@@ -20,7 +21,8 @@ export const TAG_LIGHT = {
     cyan: COLOR_LIGHT.cyan11,
     turquoise: COLOR_LIGHT.turquoise11,
     sky: COLOR_LIGHT.sky11,
-    blue: COLOR_LIGHT.blue11,
+    // ARKO: a cor 'blue' de etiqueta escolhida pelo usuario continua azul
+    blue: RadixColors.indigoP3.indigo11,
     jade: COLOR_LIGHT.jade11,
     green: COLOR_LIGHT.green11,
     grass: COLOR_LIGHT.grass11,
@@ -52,7 +54,8 @@ export const TAG_LIGHT = {
     cyan: COLOR_LIGHT.cyan3,
     turquoise: COLOR_LIGHT.turquoise3,
     sky: COLOR_LIGHT.sky3,
-    blue: COLOR_LIGHT.blue3,
+    // ARKO: a cor 'blue' de etiqueta escolhida pelo usuario continua azul
+    blue: RadixColors.indigoP3.indigo3,
     jade: COLOR_LIGHT.jade3,
     green: COLOR_LIGHT.green3,
     grass: COLOR_LIGHT.grass3,

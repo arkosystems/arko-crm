@@ -1,4 +1,5 @@
 import * as RadixColors from '@radix-ui/colors';
+import { ARKO_GREEN_LIGHT_ALPHA } from '@ui/theme/constants/ArkoGreen';
 import { GRAY_SCALE_LIGHT_ALPHA } from '@ui/theme/constants/GrayScaleLightAlpha';
 
 export const TRANSPARENT_COLORS_LIGHT = {
@@ -41,18 +42,18 @@ export const TRANSPARENT_COLORS_LIGHT = {
   sky11: RadixColors.skyA.skyA11,
   sky12: RadixColors.skyA.skyA12,
 
-  blue1: RadixColors.indigoA.indigoA1,
-  blue2: RadixColors.indigoA.indigoA2,
-  blue3: RadixColors.indigoA.indigoA3,
-  blue4: RadixColors.indigoA.indigoA4,
-  blue5: RadixColors.indigoA.indigoA5,
-  blue6: RadixColors.indigoA.indigoA6,
-  blue7: RadixColors.indigoA.indigoA7,
-  blue8: RadixColors.indigoA.indigoA8,
-  blue9: RadixColors.indigoA.indigoA9,
-  blue10: RadixColors.indigoA.indigoA10,
-  blue11: RadixColors.indigoA.indigoA11,
-  blue12: RadixColors.indigoA.indigoA12,
+  blue1: ARKO_GREEN_LIGHT_ALPHA.arko1,
+  blue2: ARKO_GREEN_LIGHT_ALPHA.arko2,
+  blue3: ARKO_GREEN_LIGHT_ALPHA.arko3,
+  blue4: ARKO_GREEN_LIGHT_ALPHA.arko4,
+  blue5: ARKO_GREEN_LIGHT_ALPHA.arko5,
+  blue6: ARKO_GREEN_LIGHT_ALPHA.arko6,
+  blue7: ARKO_GREEN_LIGHT_ALPHA.arko7,
+  blue8: ARKO_GREEN_LIGHT_ALPHA.arko8,
+  blue9: ARKO_GREEN_LIGHT_ALPHA.arko9,
+  blue10: ARKO_GREEN_LIGHT_ALPHA.arko10,
+  blue11: ARKO_GREEN_LIGHT_ALPHA.arko11,
+  blue12: ARKO_GREEN_LIGHT_ALPHA.arko12,
 
   purple1: RadixColors.purpleA.purpleA1,
   purple2: RadixColors.purpleA.purpleA2,

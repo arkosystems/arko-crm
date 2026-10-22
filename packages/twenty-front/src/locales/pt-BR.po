@@ -2101,7 +2101,7 @@ msgstr "Lista de marcadores"
 #. js-lingui-id: 8Pfllj
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
 msgid "By using Twenty, you agree to the"
-msgstr "Ao usar o Twenty, você concorda com os"
+msgstr "Ao usar o ARKO CRM, você concorda com os"
 
 #. js-lingui-id: Yx41df
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
@@ -2379,7 +2379,7 @@ msgstr "Verifique sua caixa de entrada para confirmar seu novo endereço de e-ma
 #. js-lingui-id: SxwQE8
 #: src/modules/billing/hooks/useHandleCheckoutSession.ts
 msgid "Checkout session error. Please retry or contact Twenty team"
-msgstr "Erro na sessão de checkout. Por favor, tente novamente ou contate a equipe Twenty"
+msgstr "Erro na sessão de checkout. Por favor, tente novamente ou contate a equipe do ARKO CRM"
 
 #. js-lingui-id: SviKkE
 #: src/pages/settings/profile/appearance/components/LocalePicker.tsx
@@ -4915,7 +4915,7 @@ msgstr "Erro ao cancelar a alternância de plano."
 #. js-lingui-id: QmR+2U
 #: src/modules/billing/hooks/useEndSubscriptionTrialPeriod.ts
 msgid "Error while ending trial period. Please contact Twenty team."
-msgstr "Erro ao encerrar o período de avaliação. Por favor, entre em contato com a equipe Twenty."
+msgstr "Erro ao encerrar o período de avaliação. Por favor, entre em contato com a equipe do ARKO CRM."
 
 #. js-lingui-id: 5g78zo
 #: src/pages/settings/members/SettingsWorkspaceMember.tsx
@@ -8782,7 +8782,7 @@ msgstr "widget de layout da página"
 #. js-lingui-id: NRvxzv
 #: src/pages/not-found/NotFound.tsx
 msgid "Page Not Found | Twenty"
-msgstr "Página não encontrada | Twenty"
+msgstr "Página não encontrada | ARKO CRM"
 
 #. js-lingui-id: ijBN4V
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -11216,7 +11216,7 @@ msgstr "Sincronizar com Outlook"
 #. js-lingui-id: +9x4tK
 #: src/pages/onboarding/SyncEmails.tsx
 msgid "Sync your Emails and Calendar with Twenty. Choose your privacy settings."
-msgstr "Sincronize seus e-mails e calendário com o Twenty. Escolha suas configurações de privacidade."
+msgstr "Sincronize seus e-mails e calendário com o ARKO CRM. Escolha suas configurações de privacidade."
 
 #. js-lingui-id: N2FcBE
 #: src/modules/settings/accounts/components/SettingsAccountsConnectedAccountsRowRightContainer.tsx
@@ -11959,7 +11959,7 @@ msgstr "Turquesa"
 #. js-lingui-id: JnaRPe
 #: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
 msgid "Twenty fields"
-msgstr "Campos do Twenty"
+msgstr "Campos do ARKO CRM"
 
 #. js-lingui-id: YIjS4q
 #: src/pages/settings/ai/components/SettingsAgentModelCapabilities.tsx

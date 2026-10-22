@@ -3089,7 +3089,7 @@ msgstr "O nome da coluna de junção é obrigatório."
 #. js-lingui-id: PviVyk
 #: src/engine/core-modules/workspace-invitation/services/workspace-invitation.service.ts
 msgid "Join your team on Twenty"
-msgstr "Junte-se à sua equipe no Twenty"
+msgstr "Junte-se à sua equipe no ARKO CRM"
 
 #. js-lingui-id: WNfJ8M
 #: src/modules/connected-account/standard-objects/connected-account.workspace-entity.ts
@@ -6345,7 +6345,7 @@ msgstr "Quarta-feira"
 #. js-lingui-id: TVkCrJ
 #: src/engine/core-modules/email-verification/services/email-verification.service.ts
 msgid "Welcome to Twenty: Please Confirm Your Email"
-msgstr "Bem-vindo ao Twenty: Por favor, confirme seu e-mail"
+msgstr "Bem-vindo ao ARKO CRM: Por favor, confirme seu e-mail"
 
 #. js-lingui-id: OHlJ1X
 #: src/engine/metadata-modules/page-layout-widget/utils/validate-widget-grid-position.util.ts

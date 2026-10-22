@@ -4,13 +4,27 @@ const logoStyle = {
   marginBottom: '40px',
 };
 
+// ARKO: o logo dos e-mails mora fora do repositorio; a URL vem da variavel
+// ARKO_LOGO_EMAIL_URL do servidor. Sem a variavel, o e-mail sai sem imagem.
+const getLogoUrl = () => {
+  const url = process.env.ARKO_LOGO_EMAIL_URL;
+
+  return typeof url === 'string' && url.trim() !== '' ? url.trim() : null;
+};
+
 export const Logo = () => {
+  const logoUrl = getLogoUrl();
+
+  if (logoUrl === null) {
+    return null;
+  }
+
   return (
     <Img
-      src="https://app.twenty.com/images/icons/windows11/Square150x150Logo.scale-100.png"
-      alt="Twenty logo"
-      width="40"
-      height="40"
+      src={logoUrl}
+      alt="ARKO CRM"
+      width="200"
+      height="56"
       style={logoStyle}
     />
   );
