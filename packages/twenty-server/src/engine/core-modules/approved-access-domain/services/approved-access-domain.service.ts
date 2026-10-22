@@ -100,7 +100,8 @@ export class ApprovedAccessDomainService {
     });
 
     await this.emailService.send({
-      from: `${sender.name.firstName} ${sender.name.lastName} (via Twenty) <${this.twentyConfigService.get('EMAIL_FROM_ADDRESS')}>`,
+      // ARKO: "(via ...)" usa o nome do remetente do servidor, nao "Twenty"
+      from: `${sender.name.firstName} ${sender.name.lastName} (via ${this.twentyConfigService.get('EMAIL_FROM_NAME') || 'ARKO CRM'}) <${this.twentyConfigService.get('EMAIL_FROM_ADDRESS')}>`,
       to,
       subject: 'Approve your access domain',
       text,

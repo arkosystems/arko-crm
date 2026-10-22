@@ -124,6 +124,8 @@ export class CleanerWorkspaceService {
       userName: `${workspaceMember.name.firstName} ${workspaceMember.name.lastName}`,
       workspaceDisplayName: `${workspaceDisplayName}`,
       locale: workspaceMember.locale,
+      // ARKO: o botao do e-mail aponta para este servidor, nao para o Twenty
+      serverUrl: this.twentyConfigService.get('SERVER_URL'),
     };
     const emailTemplate = WarnSuspendedWorkspaceEmail(emailData);
     const html = await render(emailTemplate, { pretty: true });
@@ -206,6 +208,8 @@ export class CleanerWorkspaceService {
       userName: `${workspaceMember.name.firstName} ${workspaceMember.name.lastName}`,
       workspaceDisplayName,
       locale: workspaceMember.locale,
+      // ARKO: o botao do e-mail aponta para este servidor, nao para o Twenty
+      serverUrl: this.twentyConfigService.get('SERVER_URL'),
     };
     const emailTemplate = CleanSuspendedWorkspaceEmail(emailData);
     const html = await render(emailTemplate, { pretty: true });

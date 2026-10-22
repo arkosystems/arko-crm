@@ -11,6 +11,8 @@ type CleanSuspendedWorkspaceEmailProps = {
   userName: string;
   workspaceDisplayName: string | undefined;
   locale: keyof typeof APP_LOCALES;
+  // ARKO: o botao leva ao endereco do proprio servidor; sem ele, sem botao
+  serverUrl?: string;
 };
 
 export const CleanSuspendedWorkspaceEmail = ({
@@ -18,6 +20,7 @@ export const CleanSuspendedWorkspaceEmail = ({
   userName,
   workspaceDisplayName,
   locale,
+  serverUrl,
 }: CleanSuspendedWorkspaceEmailProps) => {
   const i18n = createI18nInstance(locale);
 
@@ -45,10 +48,14 @@ export const CleanSuspendedWorkspaceEmail = ({
         <Trans id="If you wish to use Twenty again, you can create a new workspace." />
       </MainText>
       <br />
-      <CallToAction
-        href="https://app.twenty.com/"
-        value={i18n._('Create a new workspace')}
-      />
+      {serverUrl ? (
+        <CallToAction
+          href={serverUrl}
+          value={i18n._('Create a new workspace')}
+        />
+      ) : (
+        <></>
+      )}
       <br />
       <br />
     </BaseEmail>

@@ -318,7 +318,8 @@ export class ConfigVariables {
     description: 'Name used in the From header for outgoing emails',
     type: ConfigVariableType.STRING,
   })
-  EMAIL_FROM_NAME = 'Felix from Twenty';
+  // ARKO: nome padrao do remetente; a variavel EMAIL_FROM_NAME continua valendo
+  EMAIL_FROM_NAME = 'ARKO CRM';
 
   @ConfigVariablesMetadata({
     group: ConfigVariablesGroup.EMAIL_SETTINGS,

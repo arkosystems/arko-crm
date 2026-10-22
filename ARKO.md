@@ -57,3 +57,32 @@ Fork do [Twenty](https://github.com/twentyhq/twenty) na tag `v1.15.0`, publicado
 ## Arquivos de marca
 
 Os arquivos de marca **não fazem parte deste repositório**. Logo, favicon e ícones são montados no servidor, na pasta `/app/packages/twenty-server/dist/front/marca` do contêiner, com os nomes `favicon.png`, `icone-192.png`, `icone-512.png` e `og.png`. O logo dos e-mails é servido por uma URL configurada em `ARKO_LOGO_EMAIL_URL`. O nome "ARKO CRM" em texto pode aparecer no código.
+
+## E-mails sem o Twenty
+
+- **Rodapé:** saem os links de twenty.com, GitHub e documentação do Twenty e a linha "Twenty.com, Public Benefit Corporation / San Francisco / Paris". Fica "ARKO CRM" e, com `ARKO_CODIGO_FONTE_URL`, o link "Código-fonte".
+- **Título do HTML:** `ARKO CRM` no lugar de `Twenty email`.
+- **Logo padrão de workspace** (e-mail de validação de domínio, quando o workspace não tem logo): a URL de `ARKO_LOGO_EMAIL_URL`, em 100 x 28; sem a variável, sem imagem.
+- **Remetente:** o padrão de `EMAIL_FROM_NAME` passa a ser `ARKO CRM`, e o "(via Twenty)" dos e-mails de convite e de validação de domínio passa a usar o valor de `EMAIL_FROM_NAME`, como em "(via ARKO CRM)". O endereço de envio não mudou.
+- **E-mails de workspace suspenso ou apagado:** o botão leva ao `SERVER_URL` do próprio servidor, e não a app.twenty.com.
+- **E-mail de verificação:** "ARKO CRM" no texto, que não passa por catálogo de tradução.
+- **Prévias de desenvolvimento** (`PreviewProps`): URLs de exemplo em `crm.example.com`.
+
+Arquivos alterados:
+
+- `packages/twenty-emails/src/components/Footer.tsx`
+- `packages/twenty-emails/src/components/BaseEmail.tsx`
+- `packages/twenty-emails/src/components/BaseHead.tsx`
+- `packages/twenty-emails/src/constants/DefaultWorkspaceLogo.ts`
+- `packages/twenty-emails/src/emails/validate-approved-access-domain.email.tsx`
+- `packages/twenty-emails/src/emails/clean-suspended-workspace.email.tsx`
+- `packages/twenty-emails/src/emails/warn-suspended-workspace.email.tsx`
+- `packages/twenty-emails/src/emails/send-email-verification-link.email.tsx`
+- `packages/twenty-emails/src/emails/send-invite-link.email.tsx`
+- `packages/twenty-emails/src/emails/password-reset-link.email.tsx`
+- `packages/twenty-emails/src/emails/password-update-notify.email.tsx`
+- `packages/twenty-server/src/engine/workspace-manager/workspace-cleaner/services/cleaner.workspace-service.ts`
+- `packages/twenty-server/src/engine/core-modules/approved-access-domain/services/approved-access-domain.service.ts`
+- `packages/twenty-server/src/engine/core-modules/approved-access-domain/services/approved-access-domain.spec.ts`
+- `packages/twenty-server/src/engine/core-modules/workspace-invitation/services/workspace-invitation.service.ts`
+- `packages/twenty-server/src/engine/core-modules/twenty-config/config-variables.ts`

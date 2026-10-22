@@ -12,6 +12,8 @@ type WarnSuspendedWorkspaceEmailProps = {
   userName: string;
   workspaceDisplayName: string | undefined;
   locale: keyof typeof APP_LOCALES;
+  // ARKO: o botao leva ao endereco do proprio servidor; sem ele, sem botao
+  serverUrl?: string;
 };
 
 export const WarnSuspendedWorkspaceEmail = ({
@@ -20,6 +22,7 @@ export const WarnSuspendedWorkspaceEmail = ({
   userName,
   workspaceDisplayName,
   locale,
+  serverUrl,
 }: WarnSuspendedWorkspaceEmailProps) => {
   const i18n = createI18nInstance(locale);
   const daysLeft = inactiveDaysBeforeDelete - daysSinceInactive;
@@ -56,10 +59,14 @@ export const WarnSuspendedWorkspaceEmail = ({
         />
       </MainText>
       <br />
-      <CallToAction
-        href="https://app.twenty.com/settings/billing"
-        value={i18n._('Update your subscription')}
-      />
+      {serverUrl ? (
+        <CallToAction
+          href={`${serverUrl.replace(/\/+$/, '')}/settings/billing`}
+          value={i18n._('Update your subscription')}
+        />
+      ) : (
+        <></>
+      )}
       <br />
       <br />
     </BaseEmail>

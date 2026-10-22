@@ -21,9 +21,12 @@ export const SendEmailVerificationLinkEmail = ({
   const title = isEmailUpdate
     ? i18n._('Confirm your new email address')
     : i18n._('Confirm your email address');
+  // ARKO: estes dois textos nao estao em catalogo nenhum (o id e dinamico e o
+  // extrator do Lingui nao o pega), entao o id e o proprio texto exibido;
+  // "ARKO CRM" entra direto aqui, sem mexer nos catalogos.
   const bodyId = isEmailUpdate
-    ? 'We received a request to change the email address associated with your Twenty account. Click below to confirm this change.'
-    : 'Thanks for registering for an account on Twenty! Before we get started, we just need to confirm that this is you. Click below to verify your email address.';
+    ? 'We received a request to change the email address associated with your ARKO CRM account. Click below to confirm this change.'
+    : 'Thanks for registering for an account on ARKO CRM! Before we get started, we just need to confirm that this is you. Click below to verify your email address.';
   const ctaLabel = isEmailUpdate
     ? i18n._('Confirm new email')
     : i18n._('Verify Email');
@@ -43,7 +46,7 @@ export const SendEmailVerificationLinkEmail = ({
 };
 
 SendEmailVerificationLinkEmail.PreviewProps = {
-  link: 'https://app.twenty.com/verify-email/123',
+  link: 'https://crm.example.com/verify-email/123',
   locale: 'en',
   isEmailUpdate: false,
 };
